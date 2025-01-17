@@ -1,0 +1,36 @@
+@use '../base/variables' as vars;
+
+.card {
+  border-radius: 8px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  box-shadow: 0 0 30px vars.$colors-dropShadow;
+}
+
+.wrapper-profile {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.image-card {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.text-profile-title {
+  opacity: 0.5;
+  font-size: calc(11rem / 16);
+}
+
+.text-card-title {
+  font-size: calc(20rem / 16);
+  font-weight: vars.$font-weight-600;
+}
+
+.text-card-quote {
+  opacity: 0.7;
+}

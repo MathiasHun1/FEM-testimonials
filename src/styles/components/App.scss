@@ -1,0 +1,16 @@
+@use '../base/variables' as vars;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.wrapper-app {
+  min-height: 100%;
+  padding: 71px 24px;
+  background: vars.$colors-grayishBlue-light;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
