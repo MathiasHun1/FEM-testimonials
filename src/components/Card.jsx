@@ -2,6 +2,7 @@ import '../styles/components/Card.scss';
 
 const Card = ({
   image,
+  extraImage,
   name,
   titleText,
   quoteText,
@@ -10,9 +11,14 @@ const Card = ({
   profileTitleColor,
   cardTitleColor,
   cardQuoteColor,
+  className,
 }) => {
+  const renderExtraImage = () => {
+    return extraImage ? <img className="image-extra" src={extraImage} alt="" /> : null;
+  };
+
   return (
-    <div className="card" style={{ background: backgoundColor }}>
+    <div className={`card ${className}`} style={{ background: backgoundColor }}>
       <div className="wrapper-profile">
         <img className="image-card" src={image} alt="" />
         <div className="wrapper-profile-text">
@@ -30,6 +36,7 @@ const Card = ({
       <p className="text-card-quote" style={{ color: cardQuoteColor }}>
         {quoteText}
       </p>
+      {renderExtraImage()}
     </div>
   );
 };

@@ -7,17 +7,20 @@ import profile4Svg from './assets/image-patrick.jpg';
 import profile5Svg from './assets/image-kira.jpg';
 import Card from './components/Card';
 import { COLORS } from './constants';
+import svgQuote from './assets/bg-pattern-quotation.svg';
 
 function App() {
   return (
     <div className="wrapper-app">
       <Card
+        className={'card1'}
         backgoundColor={COLORS.violetModerate}
         profileNameColor={COLORS.white}
         profileTitleColor={COLORS.white}
         cardTitleColor={COLORS.white}
         cardQuoteColor={COLORS.grayLight}
         image={profile1Svg}
+        extraImage={svgQuote}
         name="Daniel Clifford"
         titleText="I received a job offer mid-course, and the subjects I learned were current, if not more so,
 in the company I joined. I honestly feel I got every penny’s worth."
@@ -29,6 +32,7 @@ the course, I’ve successfully switched careers, working as a Software Engineer
       />
 
       <Card
+        className={'card2'}
         backgoundColor={COLORS.grayishBlueDdark}
         profileNameColor={COLORS.white}
         profileTitleColor={COLORS.white}
@@ -42,6 +46,7 @@ for a big company. This was one of the best investments I’ve made in myself. �
       />
 
       <Card
+        className={'card3'}
         backgoundColor={COLORS.white}
         profileNameColor={COLORS.grayishBlueDdark}
         profileTitleColor={COLORS.grayishBlueDdark}
@@ -55,6 +60,7 @@ while doing something I love. ”"
       />
 
       <Card
+        className={'card4'}
         backgoundColor={COLORS.blackishBlueDark}
         profileNameColor={COLORS.white}
         profileTitleColor={COLORS.white}
@@ -71,6 +77,7 @@ an incredible community of smart and amazing people. ”"
       />
 
       <Card
+        className={'card5'}
         backgoundColor={COLORS.white}
         profileNameColor={COLORS.grayishBlueDdark}
         profileTitleColor={COLORS.grayishBlueDdark}

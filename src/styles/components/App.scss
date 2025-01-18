@@ -10,7 +10,36 @@ body,
   min-height: 100%;
   padding: 71px 24px;
   background: vars.$colors-grayishBlue-light;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
+  display: grid;
+  place-content: center;
+  gap: 30px;
+}
+
+@media (min-width: vars.$breakpoint-desktop) {
+  .wrapper-app {
+    grid-template-columns: repeat(4, 255px);
+    grid-auto-rows: min-content;
+  }
+
+  .card1 {
+    grid-column: 1 / span 2;
+  }
+
+  .card2 {
+    grid-column: 3;
+  }
+
+  .card3 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .card4 {
+    grid-column: 2 / span 2;
+  }
+
+  .card5 {
+    grid-row: 1 / span 2;
+    grid-column: 4;
+  }
 }

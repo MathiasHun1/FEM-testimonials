@@ -1,24 +1,39 @@
 @use '../base/variables' as vars;
 
 .card {
+  max-width: 400px;
   border-radius: 8px;
   padding: 32px;
+  padding-top: 26px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 10px;
   box-shadow: 0 0 30px vars.$colors-dropShadow;
+  position: relative;
+  isolation: isolate;
+  transition: transform 150ms;
 }
 
 .wrapper-profile {
   display: flex;
   align-items: center;
   gap: 18px;
+  position: relative;
+  z-index: 20;
 }
 
 .image-card {
   width: 28px;
   height: 28px;
   border-radius: 50%;
+}
+
+.image-extra {
+  position: absolute;
+  width: 110px;
+  top: 0;
+  right: 10%;
+  z-index: 10;
 }
 
 .text-profile-title {
@@ -28,9 +43,24 @@
 
 .text-card-title {
   font-size: calc(20rem / 16);
+  line-height: 1.2em;
   font-weight: vars.$font-weight-600;
+  margin-bottom: 10px;
+  z-index: 20;
 }
 
 .text-card-quote {
   opacity: 0.7;
+}
+
+@media (min-width: vars.$breakpoint-desktop) {
+  .card {
+    max-width: revert;
+  }
+
+  .card:hover {
+    transform: scale(1.03);
+    transition: transform 150ms;
+    cursor: pointer;
+  }
 }
